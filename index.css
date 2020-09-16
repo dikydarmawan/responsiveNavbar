@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Nunito', sans-serif;
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        display: flex;
+        background-color: #5D4954;
+        margin-top: -50px;
+        z-index: 1;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 8vh;
+        font-family: 'Nunito', sans-serif;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5D4954;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .about{
+        height: 335px;
+        left: 0px;
+        top: 275px;        
+        background: #FFFFFF;
+        
+    }
+    .about h1{
+        width: 72px;
+        height: 29px;
+        left: 150px;
+        top: 300px;
+        
+        font-family: Libre Franklin;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;        
+        color: #333333;
+    }
+    .about p{
+        width: 1160px;
+        left: 90px;
+        top: 90px;
+    
+        font-family: Libre Franklin;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 15px;
+        line-height: 30px;
+        text-align: justify;
+    
+        /* Gray 1 */
+    
+        color: #333333;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+section{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.hero{
+    height: 60%;
+    width: 100%;
+    position: relative;
+}
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.headline{
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    top: 50%;
+    left: 10%;
+    font-size: 40px;
+    color: white;
+}
+.hero::after{
+    content: "";
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.3;
+    top: 0;
+}
+.about{
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 650px;
+    background-color: white;
+    
+}
+.about h1{
+    left: 600px;
+    font-family: Libre Franklin;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 29px;
+    /* identical to box height */
+    
+    
+    /* Gray 1 */
+    
+    color: #333333;
+}
+.about p{
+    width: 1160px;
+    left: 90px;
+    top: 90px;
+
+    font-family: Libre Franklin;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 15px;
+    line-height: 30px;
+    text-align: justify;
+
+    /* Gray 1 */
+
+    color: #333333;
+}
